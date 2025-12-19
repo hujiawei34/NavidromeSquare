@@ -1,0 +1,7 @@
+.env
+.ini
+logs/
+*.log
+tmp/
+data/
+music/

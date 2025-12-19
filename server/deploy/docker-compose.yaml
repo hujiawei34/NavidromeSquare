@@ -1,0 +1,22 @@
+services:
+  navidrome:
+    image: deluan/navidrome:latest
+    container_name: navidrome
+    ports:
+      - 14533:4533
+    restart: unless-stopped
+    environment:
+      # Optional: put your config options customization here. Examples:
+      ND_LOGLEVEL: info
+      # ND_SESSIONTIMEOUT: 24h
+      # ND_BASEURL: /navidrome
+      # ND_CONFIGFILE: /data/navidrome.toml
+    volumes:
+      - "./data:/data"
+      - "/mnt/e/data/声音/声音:/music:ro"
+    networks:
+      - navidrome-network
+
+networks:
+  navidrome-network:
+    driver: bridge
