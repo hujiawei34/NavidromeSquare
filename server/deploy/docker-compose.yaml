@@ -13,7 +13,7 @@ services:
       # ND_CONFIGFILE: /data/navidrome.toml
     volumes:
       - "./data:/data"
-      - "/mnt/e/data/声音/声音:/music:ro"
+      - "/mnt/music/:/music:ro"
     networks:
       - navidrome-network
 
