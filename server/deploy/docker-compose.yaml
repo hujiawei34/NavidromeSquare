@@ -12,7 +12,7 @@ services:
       # ND_BASEURL: /navidrome
       # ND_CONFIGFILE: /data/navidrome.toml
     volumes:
-      - "./data:/data"
+      - "../data:/data"
       - "/mnt/music/:/music:ro"
     networks:
       - navidrome-network

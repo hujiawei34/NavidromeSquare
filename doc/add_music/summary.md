@@ -100,4 +100,17 @@ sudo systemctl enable --now autossh-reverse
 验证：
 ```bash
 systemctl status autossh-reverse
+
+
+```
+
+```bash
+ssh aliyun
+ll /mnt/music
+#如果没有音乐文件，需要重新挂载
+ssh -p 10022 localhost
+ll /mnt/d/music/
+exit
+#以下命令要在aliyun上执行
+sshfs -p 10022 root@localhost:/mnt/d/Music/music /mnt/music
 ```
